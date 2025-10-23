@@ -25,66 +25,155 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.advancelayout.ui.theme.Hijauold
 
 
 @Composable
 fun ActivityPertama(modifier: Modifier) {
-    Column(modifier = Modifier.padding(top=100.dp)
-        .fillMaxSize(),
+    Column(
+        modifier = Modifier.padding(top = 100.dp)
+            .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-        Text(stringResource( R.string.prodi),
+    ) {
+        Text(
+            stringResource(R.string.prodi),
             fontSize = 35.sp,
-            fontWeight = FontWeight.Bold)
-        Text(stringResource(R.string.univ),
-            fontSize = 22.sp)
+            fontWeight = FontWeight.Bold
+        )
+        Text(
+            stringResource(R.string.univ),
+            fontSize = 22.sp
+        )
         Spacer(modifier = Modifier.height(25.dp))
-        Card(modifier = Modifier
-            .fillMaxWidth(1f )
-            .padding(12.dp),
+        Card(
+            modifier = Modifier
+                .fillMaxWidth(1f)
+                .padding(12.dp),
             colors = CardDefaults.cardColors(
                 containerColor = Color.DarkGray
-            )) {
+            )
+        ) {
             Row() {
-                    val gambar = painterResource(R.drawable.logo_umy)
-                    Image(
-                        painter = gambar,
-                        contentDescription = null,
-                        modifier = modifier.size(100.dp).padding(5.dp)
+                val gambar = painterResource(R.drawable.logo_umy)
+                Image(
+                    painter = gambar,
+                    contentDescription = null,
+                    modifier = modifier.size(100.dp).padding(5.dp)
+                )
+                Spacer(modifier = modifier.width(30.dp))
+                Column {
+                    Text(
+                        stringResource(R.string.nama),
+                        fontSize = 30.sp,
+                        fontFamily = FontFamily.Cursive,
+                        color = Color.White,
+                        modifier = Modifier.padding(top = 15.dp)
                     )
-                    Spacer(modifier = modifier.width(30.dp))
-                    Column {
-                        Text(
-                            stringResource(R.string.nama ),
-                            fontSize = 30.sp,
-                            fontFamily = FontFamily.Cursive,
-                            color = Color.White,
-                            modifier = Modifier.padding(top = 15.dp)
-                        )
-                        Text(
-                            stringResource(R.string.alamat),
-                            fontSize = 20.sp,
-                        )
-                    }
+                    Text(
+                        stringResource(R.string.alamat),
+                        fontSize = 20.sp,
+                    )
+                }
 
 
+            }
+
+        }
+        Card(
+            modifier = Modifier
+                .fillMaxWidth(1f)
+                .padding(12.dp),
+            colors = CardDefaults.cardColors(
+                containerColor = Color.Blue
+            )
+        ) {
+            Row() {
+                val gambar = painterResource(R.drawable.logo_umy)
+                Image(
+                    painter = gambar,
+                    contentDescription = null,
+                    modifier = modifier.size(100.dp).padding(5.dp)
+                )
+                Spacer(modifier = modifier.width(30.dp))
+                Column {
+                    Text(
+                        stringResource(R.string.isi_nama1),
+                        fontSize = 30.sp,
+                        fontFamily = FontFamily.Cursive,
+                        color = Color.White,
+                        modifier = Modifier.padding(top = 15.dp)
+                    )
+                    Text(
+                        stringResource(R.string.isi_nohp1), // Asumsi ada string resource ini
+                        fontSize = 20.sp,
+                        color = Color.White,
+                        modifier = Modifier.padding(top = 10.dp)
+                    )
+                    Text(
+                        stringResource(R.string.isi_alamat1), // Asumsi ada string resource ini
+                        fontSize = 20.sp,
+                        color = Color.White,
+                        modifier = Modifier.padding(top = 5.dp)
+                    )
                 }
 
             }
-        Box(
-            modifier = Modifier
-                .fillMaxSize()
-        ) {
-            Text(
-                stringResource(R.string.copy),
-                modifier = Modifier
-                    .align(Alignment.BottomCenter)
-                    .padding(bottom = 60.dp)
-
-
-            )
         }
-
+        Card(
+            modifier = Modifier
+                .fillMaxWidth(1f)
+                .padding(12.dp),
+            colors = CardDefaults.cardColors(
+                containerColor = Hijauold
+            )
+        ) {
+            Row() {
+                val gambar = painterResource(R.drawable.logo_umy)
+                Image(
+                    painter = gambar,
+                    contentDescription = null,
+                    modifier = modifier.size(100.dp).padding(5.dp)
+                )
+                Spacer(modifier = modifier.width(30.dp))
+                Column {
+                    Text(
+                        stringResource(R.string.isi_nama),
+                        fontSize = 30.sp,
+                        fontFamily = FontFamily.Cursive,
+                        color = Color.White,
+                        modifier = Modifier.padding(top = 15.dp)
+                    )
+                    Text(
+                        stringResource(R.string.isi_nohp), // Asumsi ada string resource ini
+                        fontSize = 20.sp,
+                        color = Color.White,
+                        modifier = Modifier.padding(top = 10.dp)
+                    )
+                    Text(
+                        stringResource(R.string.isi_alamat), // Asumsi ada string resource ini
+                        fontSize = 20.sp,
+                        color = Color.White,
+                        modifier = Modifier.padding(top = 5.dp)
+                    )
+                }
+            }
         }
     }
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+    ) {
+        Text(
+            stringResource(R.string.copy),
+            modifier = Modifier
+                .align(Alignment.BottomCenter)
+                .padding(bottom = 60.dp)
+
+
+        )
+    }
+}
+
+
+
 
