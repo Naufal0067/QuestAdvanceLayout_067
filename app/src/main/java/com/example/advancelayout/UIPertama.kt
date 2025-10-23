@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.ui.graphics.Color
@@ -49,6 +50,8 @@ fun ActivityPertama(modifier: Modifier) {
                         contentDescription = null,
                         modifier = modifier.size(100.dp).padding(5.dp)
                     )
+                    Spacer(modifier = modifier.width(30.dp))
+
                 }
             }
 
