@@ -19,6 +19,7 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -51,6 +52,15 @@ fun ActivityPertama(modifier: Modifier) {
                         modifier = modifier.size(100.dp).padding(5.dp)
                     )
                     Spacer(modifier = modifier.width(30.dp))
+                    Column {
+                        Text(
+                            stringResource(R.string.nama ),
+                            fontSize = 30.sp,
+                            fontFamily = FontFamily.Monospace,
+                            color = Color.White,
+                            modifier = Modifier.padding(top = 15.dp)
+                        )
+                    }
 
                 }
             }
