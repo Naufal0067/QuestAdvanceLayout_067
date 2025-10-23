@@ -10,6 +10,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -27,5 +29,13 @@ fun ActivityPertama(modifier: Modifier) {
         Text(stringResource(R.string.univ),
             fontSize = 22.sp)
         Spacer(modifier = Modifier.height(25.dp))
+        Card(modifier = Modifier
+            .fillMaxSize(1f )
+            .padding(12.dp),
+            colors = CardDefaults.cardColors(
+                containerColor =
+            )) {
+
+        }
     }
 }
