@@ -1,6 +1,7 @@
 package com.example.advancelayout
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -64,6 +65,12 @@ fun ActivityPertama(modifier: Modifier) {
                             stringResource(R.string.alamat),
                             fontSize = 20.sp,
                         )
+                    }
+                    Box(
+                        modifier = Modifier
+                            .fillMaxSize()
+                    ) {
+                        Text()
                     }
 
                 }
