@@ -57,7 +57,7 @@ fun ActivityPertama(modifier: Modifier) {
                         Text(
                             stringResource(R.string.nama ),
                             fontSize = 30.sp,
-                            fontFamily = FontFamily.Monospace,
+                            fontFamily = FontFamily.Cursive,
                             color = Color.White,
                             modifier = Modifier.padding(top = 15.dp)
                         )
